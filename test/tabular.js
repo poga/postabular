@@ -48,4 +48,19 @@ describe('Tabular', () => {
             }).to.throw("Incorrect row size")
         })
     })
+    describe('#insertRowBefore()', () => {
+        it('should append new row and update tabular size', () => {
+            t.insertRowBefore(0,[1,2,3])
+
+            expect(t.rows).have.length(1)
+            expect(t.size()).deep.equal({row: 1, col: 3})
+        })
+        it('should throw exception if row doesn\'t have same size', () => {
+            t.insertRowBefore(0, [1,2,3])
+
+            expect(function() {
+                t.insertRowBefore(0, [1,2])
+            }).to.throw("Incorrect row size")
+        })
+    })
 })
