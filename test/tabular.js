@@ -54,7 +54,7 @@ describe('Tabular', () => {
         })
     })
     describe('#insertRowBefore()', () => {
-        it('should append new row and update tabular size', () => {
+        it('should insert new row and update tabular size', () => {
             t.insertRowBefore(0,[1,2,3])
 
             expect(t.rows).have.length(1)
@@ -71,6 +71,46 @@ describe('Tabular', () => {
             expect(function() {
                 t.insertRowBefore(0, [1,2])
             }).to.throw("Incorrect row size")
+        })
+    })
+    describe('#insertColumnBefore()', () => {
+        it('should insert new column and update tabular size', () => {
+            t.insertColumnBefore(0,[1,2,3])
+
+            expect(t.rows).have.length(3)
+            expect(t.size()).deep.equal({row: 3, col: 1})
+
+            t.insertColumnBefore(0,[4,5,6])
+
+            expect(t.rows).have.length(3)
+            expect(t.size()).deep.equal({row: 3, col: 2})
+        })
+        it('should throw exception if row doesn\'t have same size', () => {
+            t.insertColumnBefore(0, [1,2,3])
+
+            expect(function() {
+                t.insertColumnBefore(0, [1,2])
+            }).to.throw("Incorrect column size")
+        })
+    })
+    describe('#insertColumnAfter()', () => {
+        it('should insert new column and update tabular size', () => {
+            t.insertColumnAfter(0,[1,2,3])
+
+            expect(t.rows).have.length(3)
+            expect(t.size()).deep.equal({row: 3, col: 1})
+
+            t.insertColumnAfter(0,[4,5,6])
+
+            expect(t.rows).have.length(3)
+            expect(t.size()).deep.equal({row: 3, col: 2})
+        })
+        it('should throw exception if row doesn\'t have same size', () => {
+            t.insertColumnAfter(0, [1,2,3])
+
+            expect(function() {
+                t.insertColumnAfter(0, [1,2])
+            }).to.throw("Incorrect column size")
         })
     })
 })
