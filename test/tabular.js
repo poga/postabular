@@ -39,6 +39,11 @@ describe('Tabular', () => {
 
             expect(t.rows).have.length(1)
             expect(t.size()).deep.equal({row: 1, col: 3})
+
+            t.insertRowAfter(0,[4,5,6])
+
+            expect(t.rows).have.length(2)
+            expect(t.size()).deep.equal({row: 2, col: 3})
         })
         it('should throw exception if row doesn\'t have same size', () => {
             t.insertRowAfter(0, [1,2,3])
@@ -54,6 +59,11 @@ describe('Tabular', () => {
 
             expect(t.rows).have.length(1)
             expect(t.size()).deep.equal({row: 1, col: 3})
+
+            t.insertRowBefore(0,[4,5,6])
+
+            expect(t.rows).have.length(2)
+            expect(t.size()).deep.equal({row: 2, col: 3})
         })
         it('should throw exception if row doesn\'t have same size', () => {
             t.insertRowBefore(0, [1,2,3])
