@@ -1,0 +1,25 @@
+{
+  "name": "postabular",
+  "version": "0.0.1",
+  "description": "Transforming data with JS plugins",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --reporter dot"
+  },
+  "author": "Poga Po <poga.bahamut@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  },
+  "bin": {
+    "postschema": "bin/postabular.js"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "chai": "^3.5.0",
+    "commander": "^2.9.0",
+    "csv": "^0.4.6",
+    "lodash": "^4.4.0",
+    "through2": "^2.0.1"
+  }
+}
