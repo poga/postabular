@@ -92,6 +92,16 @@ describe('Tabular', () => {
                 t.insertColumnBefore(0, [1,2])
             }).to.throw("Incorrect column size")
         })
+        it('should allow insertion without distrupting iteration', () => {
+            t.appendRow([1,1,1])
+            t.appendRow([1,1,1])
+            t.appendRow([1,1,1])
+
+            t.eachRow((row) => {
+                row.insertRowAfter([2,2,2])
+            })
+            expect(t.rows).have.length(6)
+        })
     })
     describe('#insertColumnAfter()', () => {
         it('should insert new column and update tabular size', () => {
