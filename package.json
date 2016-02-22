@@ -1,6 +1,6 @@
 {
   "name": "postabular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Transforming data with JS plugins",
   "main": "lib/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "mocha": "^2.4.5"
   },
   "bin": {
-    "postschema": "bin/postabular.js"
+    "postabular": "bin/postabular.js"
   },
   "dependencies": {
     "chai": "^3.5.0",
