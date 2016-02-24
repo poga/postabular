@@ -9,13 +9,13 @@
   "author": "Poga Po <poga.bahamut@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^2.4.5"
   },
   "bin": {
     "postabular": "bin/postabular.js"
   },
   "dependencies": {
-    "chai": "^3.5.0",
     "commander": "^2.9.0",
     "csv": "^0.4.6",
     "lodash": "^4.4.0",
