@@ -1,6 +1,6 @@
 {
   "name": "postabular",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Transforming data with JS plugins",
   "main": "lib/index.js",
   "scripts": {
