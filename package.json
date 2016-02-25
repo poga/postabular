@@ -16,6 +16,7 @@
     "postabular": "bin/postabular.js"
   },
   "dependencies": {
+    "bluebird": "^3.3.1",
     "commander": "^2.9.0",
     "csv": "^0.4.6",
     "lodash": "^4.4.0",
