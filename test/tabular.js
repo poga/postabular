@@ -113,4 +113,88 @@ describe('Tabular', () => {
             }).to.throw("Incorrect column size")
         })
     })
+    describe('#eachRow()', () => {
+        it('should return each row and its index', () => {
+            t.appendRow([1,2,3])
+            t.appendRow([4,5,6])
+
+            t.eachRow((row, i) => {
+                if (i == 0) {
+                    row.eachCell((cell, j) => {
+                        switch (j) {
+                        case 0:
+                            expect(cell.value).equal(1)
+                            break
+                        case 1:
+                            expect(cell.value).equal(2)
+                            break
+                        case 2:
+                            expect(cell.value).equal(3)
+                            break
+                        }
+                    })
+                }
+                if (i == 1) {
+                    row.eachCell((cell, j) => {
+                        switch (j) {
+                        case 0:
+                            expect(cell.value).equal(4)
+                            break
+                        case 1:
+                            expect(cell.value).equal(5)
+                            break
+                        case 2:
+                            expect(cell.value).equal(6)
+                            break
+                        }
+                    })
+                }
+            })
+        })
+    })
+    describe('#eachColumn()', () => {
+        it('should return each row and its index', () => {
+            t.appendRow([1,2,3])
+            t.appendRow([4,5,6])
+
+            t.eachColumn((col, i) => {
+                if (i == 0) {
+                    col.eachCell((cell, j) => {
+                        switch (j) {
+                        case 0:
+                            expect(cell.value).equal(1)
+                            break
+                        case 1:
+                            expect(cell.value).equal(4)
+                            break
+                        }
+                    })
+                }
+                if (i == 1) {
+                    col.eachCell((cell, j) => {
+                        switch (j) {
+                        case 0:
+                            expect(cell.value).equal(2)
+                            break
+                        case 1:
+                            expect(cell.value).equal(5)
+                            break
+                        }
+                    })
+                }
+                if (i == 2) {
+                    col.eachCell((cell, j) => {
+                        switch (j) {
+                        case 0:
+                            expect(cell.value).equal(3)
+                            break
+                        case 1:
+                            expect(cell.value).equal(6)
+                            break
+                        }
+                    })
+                }
+            })
+        })
+    })
 })
