@@ -120,34 +120,14 @@ describe('Tabular', () => {
 
             t.eachRow((row, i) => {
                 if (i == 0) {
-                    row.eachCell((cell, j) => {
-                        switch (j) {
-                        case 0:
-                            expect(cell.value).equal(1)
-                            break
-                        case 1:
-                            expect(cell.value).equal(2)
-                            break
-                        case 2:
-                            expect(cell.value).equal(3)
-                            break
-                        }
-                    })
+                    expect(row.getCell(0).value).equal(1)
+                    expect(row.getCell(1).value).equal(2)
+                    expect(row.getCell(2).value).equal(3)
                 }
                 if (i == 1) {
-                    row.eachCell((cell, j) => {
-                        switch (j) {
-                        case 0:
-                            expect(cell.value).equal(4)
-                            break
-                        case 1:
-                            expect(cell.value).equal(5)
-                            break
-                        case 2:
-                            expect(cell.value).equal(6)
-                            break
-                        }
-                    })
+                    expect(row.getCell(0).value).equal(4)
+                    expect(row.getCell(1).value).equal(5)
+                    expect(row.getCell(2).value).equal(6)
                 }
             })
         })
@@ -159,40 +139,16 @@ describe('Tabular', () => {
 
             t.eachColumn((col, i) => {
                 if (i == 0) {
-                    col.eachCell((cell, j) => {
-                        switch (j) {
-                        case 0:
-                            expect(cell.value).equal(1)
-                            break
-                        case 1:
-                            expect(cell.value).equal(4)
-                            break
-                        }
-                    })
+                    expect(col.getCell(0).value).equal(1)
+                    expect(col.getCell(1).value).equal(4)
                 }
                 if (i == 1) {
-                    col.eachCell((cell, j) => {
-                        switch (j) {
-                        case 0:
-                            expect(cell.value).equal(2)
-                            break
-                        case 1:
-                            expect(cell.value).equal(5)
-                            break
-                        }
-                    })
+                    expect(col.getCell(0).value).equal(2)
+                    expect(col.getCell(1).value).equal(5)
                 }
                 if (i == 2) {
-                    col.eachCell((cell, j) => {
-                        switch (j) {
-                        case 0:
-                            expect(cell.value).equal(3)
-                            break
-                        case 1:
-                            expect(cell.value).equal(6)
-                            break
-                        }
-                    })
+                    expect(col.getCell(0).value).equal(3)
+                    expect(col.getCell(1).value).equal(6)
                 }
             })
         })
