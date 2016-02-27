@@ -1,6 +1,6 @@
 # Postabular
 
-![](https://img.shields.io/npm/v/postabular.svg)![](https://img.shields.io/npm/l/postabular.svg)
+![](https://img.shields.io/npm/v/postabular.svg) ![](https://img.shields.io/npm/l/postabular.svg)
 
 *This project is under active development. Everything will change.*
 
