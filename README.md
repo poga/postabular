@@ -1,5 +1,9 @@
 # Postabular
 
+![](https://img.shields.io/npm/v/postabular.svg)![](https://img.shields.io/npm/l/postabular.svg)
+
+*This project is under active development. Everything will change.*
+
 Postabular is a tool for transforming tabular data with JS plugins.
 
 ```
