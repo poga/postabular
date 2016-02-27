@@ -153,4 +153,18 @@ describe('Tabular', () => {
             })
         })
     })
+    describe('#getRow()', () => {
+        it('should throw exception if index is out of bound', () => {
+            expect(function() {
+                t.getRow(-1)
+            }).to.throw("Index out of bound")
+        })
+    })
+    describe('#getColumn()', () => {
+        it('should throw exception if index is out of bound', () => {
+            expect(function() {
+                t.getColumn(-1)
+            }).to.throw("Index out of bound")
+        })
+    })
 })
