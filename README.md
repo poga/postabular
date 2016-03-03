@@ -15,12 +15,12 @@ npm i -g postabular
 Use postabular from CLI with local plugin:
 
 ```
-postabular -l example/set_first_row_to_1 input.csv output.csv
+postabular -l example/set_first_row_to_1 -o output.csv input.csv
 ```
 Use postabular from CLI with plugin package:
 
 ```
-postabular -u lint-empty-cell input.csv output.csv
+postabular -u lint-empty-cell -o output.csv input.csv
 ```
 
 for more help:
