@@ -18,6 +18,15 @@ describe('Tabular', () => {
             expect(t.size()).deep.equal({row: 0, col: 0})
         })
     })
+
+    describe('#setMeta()', () => {
+        it('should have a meta object for storing metadata', () => {
+            expect(t.meta).deep.equal({})
+            t.setMeta("foo", 1)
+            expect(t.meta).deep.equal({"foo": 1})
+        })
+    })
+
     describe('#appendRow()', () => {
         it('should append new row and update tabular size', () => {
             t.appendRow([1,2,3])
